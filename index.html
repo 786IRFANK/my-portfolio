@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of an API Integration Developer building reliable integrations, ETL pipelines, automation, and AI-powered workflows.">
+  <title>Irfan Khan | API Integration Developer</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2e;
+      --panel2: #17223a;
+      --text: #eef3ff;
+      --muted: #aab7d0;
+      --accent: #73e0c1;
+      --accent2: #8ca8ff;
+      --line: rgba(210,225,255,.14);
+      --shadow: 0 18px 50px rgba(0,0,0,.22);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text); background: radial-gradient(circle at 80% 0%, #1a2a4a 0, transparent 32%), var(--bg);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 22px 0; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: rgba(11,16,32,.82); }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.05rem; }
+    .brand span { color: var(--accent); }
+    .navlinks { display:flex; gap:22px; flex-wrap:wrap; color:var(--muted); font-size:.92rem; }
+    .navlinks a:hover, .text-link:hover { color:var(--accent); }
+    .hero { padding: 86px 0 68px; display:grid; grid-template-columns: 1.45fr .8fr; gap:42px; align-items:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--accent); font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.13em; }
+    .dot { width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 18px var(--accent); }
+    h1 { font-size:clamp(2.6rem, 6vw, 5rem); line-height:1.04; letter-spacing:-.065em; margin:18px 0; }
+    h1 em { color:var(--accent); font-style:normal; }
+    .lead { color:var(--muted); font-size:1.12rem; max-width:680px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:12px; padding:11px 17px; font-weight:700; font-size:.94rem; transition:.2s; }
+    .btn.primary { background:var(--accent); color:#08151a; border-color:var(--accent); }
+    .btn:hover { transform:translateY(-2px); }
+    .hero-card { background:linear-gradient(145deg, rgba(115,224,193,.12), rgba(140,168,255,.08)); border:1px solid var(--line); border-radius:24px; padding:25px; box-shadow:var(--shadow); }
+    .hero-card h3 { margin:0 0 16px; font-size:1.05rem; }
+    .stat { display:flex; justify-content:space-between; gap:16px; padding:13px 0; border-bottom:1px solid var(--line); }
+    .stat:last-child { border:0; }
+    .stat span:first-child { color:var(--muted); }
+    .stat strong { text-align:right; font-size:.93rem; }
+    section { padding: 52px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:25px; }
+    .section-head h2 { font-size:clamp(1.8rem,4vw,2.6rem); letter-spacing:-.045em; margin:5px 0 0; line-height:1.15; }
+    .section-head p { max-width:520px; color:var(--muted); margin:0; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .project { display:flex; flex-direction:column; background:linear-gradient(180deg, rgba(23,34,58,.95), rgba(18,26,46,.95)); border:1px solid var(--line); border-radius:20px; padding:24px; min-height:100%; transition:transform .2s,border-color .2s; }
+    .project:hover { transform:translateY(-4px); border-color:rgba(115,224,193,.55); }
+    .project-top { display:flex; justify-content:space-between; gap:12px; align-items:start; }
+    .project h3 { margin:0; font-size:1.2rem; line-height:1.35; }
+    .number { color:var(--accent); font-size:.78rem; letter-spacing:.12em; font-weight:800; }
+    .project p { color:var(--muted); margin:14px 0 18px; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; padding-top:4px; }
+    .tag { font-size:.76rem; color:#d7e2fa; border:1px solid var(--line); background:rgba(255,255,255,.035); border-radius:999px; padding:5px 9px; }
+    .project-links { display:flex; gap:15px; flex-wrap:wrap; margin-top:20px; font-size:.88rem; font-weight:700; }
+    .text-link { color:var(--accent); }
+    .coming { color:#c2cce0; font-weight:500; font-size:.78rem; }
+    .skills { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .skill { border:1px solid var(--line); background:rgba(255,255,255,.035); padding:16px; border-radius:14px; }
+    .skill strong { display:block; margin-bottom:4px; }
+    .skill span { color:var(--muted); font-size:.88rem; }
+    .contact { background:linear-gradient(135deg, rgba(115,224,193,.1), rgba(140,168,255,.1)); border:1px solid var(--line); border-radius:24px; padding:30px; display:flex; align-items:center; justify-content:space-between; gap:25px; }
+    .contact h2 { margin:0 0 8px; font-size:2rem; letter-spacing:-.04em; }
+    .contact p { color:var(--muted); margin:0; }
+    footer { padding:28px 0 40px; color:var(--muted); font-size:.86rem; border-top:1px solid var(--line); margin-top:60px; }
+    .note { color:var(--muted); font-size:.85rem; }
+    @media (max-width:760px) {
+      .hero { grid-template-columns:1fr; padding:58px 0 38px; }
+      .grid { grid-template-columns:1fr; }
+      .skills { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .section-head { display:block; }
+      .section-head p { margin-top:12px; }
+      .contact { display:block; }
+      .contact .actions { margin-top:20px; }
+      .navlinks { gap:12px; font-size:.82rem; }
+    }
+    @media (max-width:430px) {
+      .wrap { width:min(100% - 28px, 1120px); }
+      .navlinks a:nth-child(2) { display:none; }
+      .skills { grid-template-columns:1fr 1fr; }
+      .project { padding:19px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">IRFAN<span>.</span></a>
+    <div class="navlinks">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> API Integration · Automation · ETL</div>
+      <h1>Hi, I’m Irfan.<br>I build <em>systems that connect.</em></h1>
+      <p class="lead">API Integration Developer focused on connecting business platforms, automating repetitive workflows, and building data pipelines and AI-powered tools with Python.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my projects ↓</a>
+        <a class="btn" href="www.linkedin.com/in/irfan-khan-75587114b/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/786IRFANK" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h3>What I work on</h3>
+      <div class="stat"><span>Integrations</span><strong>CRM · Finance · E-commerce</strong></div>
+      <div class="stat"><span>Data engineering</span><strong>ETL · PostgreSQL · GCP</strong></div>
+      <div class="stat"><span>Automation</span><strong>Webhooks · Schedulers · AWS</strong></div>
+      <div class="stat"><span>AI applications</span><strong>RAG · FastAPI · WhatsApp</strong></div>
+    </aside>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Selected work</div><h2>Projects I’ve worked on</h2></div>
+        <p>A selection of integration, automation, data engineering, and AI projects. Add public repository and Loom demo links when they’re ready.</p>
+      </div>
+      <div class="grid">
+        <article class="project">
+          <div class="project-top"><h3>ETL Pipeline — NHANES to PostgreSQL</h3><span class="number">01</span></div>
+          <p>Extracts NHANES data, organizes it by category, and loads it into PostgreSQL on Google Cloud. Uses a Bronze–Silver–Gold layered data approach, with Redis and Celery supporting background processing.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">ETL</span><span class="tag">GCP</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Celery</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/ETL-data-Pipeline/tree/main" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-top"><h3>QuickBooks → Airtable Monthly Sync</h3><span class="number">02</span></div>
+          <p>Retrieves monthly payment transaction statements from QuickBooks and stores them in Airtable. The workflow is scheduled to run automatically once per month and is hosted on an AWS EC2 instance.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">QuickBooks API</span><span class="tag">Airtable API</span><span class="tag">Scheduling</span><span class="tag">AWS EC2</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/Quickbook_Airtable_montly_sync" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-top"><h3>Google Apps Script + RAG Knowledge Assistant</h3><span class="number">03</span></div>
+          <p>Connects a retrieval-augmented generation (RAG) chatbot, backed by TeamOne documentation, to a Google Sheets sidebar. Users ask questions about spreadsheet formulas; Apps Script calls a FastAPI endpoint and displays the response.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">RAG</span><span class="tag">Google Apps Script</span><span class="tag">LLM</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/Google-Apps-Script-RAG-Knowledge-Assistant" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-top"><h3>Healthcare WhatsApp Diet Plan Bot</h3><span class="number">04</span></div>
+          <p>A WhatsApp workflow that collects user onboarding details, guides the user through payment, and sends daily diet plans after payment. Designed to automate onboarding and recurring plan delivery.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">WhatsApp API</span><span class="tag">Payments</span><span class="tag">Automation</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/Healthcare-WhatsApp-Diet-Plan-Bot" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-top"><h3>HubSpot → Quickbase Serverless Sync</h3><span class="number">05</span></div>
+          <p>A real-time serverless integration that syncs HubSpot CRM records into Quickbase. HubSpot webhooks trigger API Gateway, which forwards events to AWS Lambda to find or create matching Quickbase records.</p>
+          <div class="tags"><span class="tag">HubSpot API</span><span class="tag">Quickbase API</span><span class="tag">Webhooks</span><span class="tag">AWS Lambda</span><span class="tag">API Gateway</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/HubSpot---Quickbase-Serverless-Sync" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-top"><h3>E-commerce → Zoho Books Invoice Automation</h3><span class="number">06</span></div>
+          <p>Collects the previous month’s orders from Shopify, Etsy, Amazon, and Faire, then creates sales invoices and refund credit notes in Zoho Books. Sends a summary email after each run.</p>
+          <div class="tags"><span class="tag">REST APIs</span><span class="tag">E-commerce</span><span class="tag">Zoho Books</span><span class="tag">Invoices</span><span class="tag">Scheduled Jobs</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/E-commerce---Zoho-Books-Invoice-Automation" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+        <article class="project">
+          <div class="project-top"><h3>OpenWrench ↔ Zendesk Ticket Sync</h3><span class="number">07</span></div>
+          <p>A bidirectional synchronization service between OpenWrench and Zendesk. Built with FastAPI and PostgreSQL, with scheduled jobs to keep ticket data aligned and reduce manual updates.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Webhooks / APIs</span><span class="tag">APScheduler</span></div>
+          <div class="project-links"><a class="text-link" href="https://github.com/786IRFANK/OpenWrench---Zendesk-Ticket-Sync" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        </article>
+      </div>
+      <p class="note" style="margin-top:18px">Before publishing: replace the sample GitHub and Loom URLs with your real links. Only publish code or demos you’re allowed to share; remove client data, API keys, tokens, and confidential details.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Toolbox</div><h2>Skills & technologies</h2></div>
+        <p>Technologies represented in the projects above. Keep this section aligned with tools you can confidently discuss with a client.</p>
+      </div>
+      <div class="skills">
+        <div class="skill"><strong>Programming</strong><span>Python · SQL</span></div>
+        <div class="skill"><strong>APIs</strong><span>REST APIs · Webhooks · OAuth</span></div>
+        <div class="skill"><strong>Data</strong><span>ETL · PostgreSQL · Data layers</span></div>
+        <div class="skill"><strong>Async jobs</strong><span>Celery · Redis · Scheduling</span></div>
+        <div class="skill"><strong>Cloud</strong><span>AWS Lambda · API Gateway · EC2</span></div>
+        <div class="skill"><strong>Google Cloud</strong><span>GCP · PostgreSQL</span></div>
+        <div class="skill"><strong>Business platforms</strong><span>HubSpot · QuickBooks · Airtable · Zoho</span></div>
+        <div class="skill"><strong>AI workflows</strong><span>RAG · FastAPI · WhatsApp automation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">A little about me</div><h2>Practical automation, built for real workflows.</h2></div>
+      </div>
+      <p class="lead">I work on integrations that move data between business tools, automate recurring processes, and make information easier to access. I’m especially interested in API integrations, ETL pipelines, cloud-based automation, and AI assistants connected to useful knowledge sources.</p>
+      <p class="note">Experience: Linuxbean · June 2023 – Present &nbsp; | &nbsp; Education: BE (Computer Science Engineering), 2020</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <div class="eyebrow">Let’s work together</div>
+          <h2>Need help connecting your tools?</h2>
+          <p>For API integrations, data syncs, ETL pipelines, or workflow automation, feel free to connect.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="www.linkedin.com/in/irfan-khan-75587114b" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/786IRFANK" target="_blank" rel="noreferrer">View GitHub ↗</a>
+          <a class="btn" href="mailto:786irfank1314@gmail.com">Email me ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="year">2026</span> Irfan Khan · API Integration Developer</div></footer>
+</body>
+</html>
